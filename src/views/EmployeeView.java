@@ -28,17 +28,17 @@ public class EmployeeView {
 
         title = "Введите количество рабочих часов: ";
         System.out.print(title);
-        numberOfHours = Validator.validateQuantityInput(scanner);
+        numberOfHours = Validator.validatIntInput(scanner);
         model.setNumberOfHours(numberOfHours);
 
         title = "Введите ставку за час работы: ";
         System.out.print(title);
-        ratePerHour = Validator.validatePriceInput(scanner);
+        ratePerHour = Validator.validateDoubleInput(scanner);
         model.setRatePerHour(ratePerHour);
 
         title = "Введите сумму выручки: ";
         System.out.print(title);
-        revenue = Validator.validatePriceInput(scanner);
+        revenue = Validator.validateDoubleInput(scanner);
         model.setRevenue(revenue);
 
         scanner.close();

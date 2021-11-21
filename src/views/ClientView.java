@@ -29,12 +29,12 @@ public class ClientView {
 
         title = "Введите количество: ";
         System.out.print(title);
-        quantity = Validator.validateQuantityInput(scanner);
+        quantity = Validator.validatIntInput(scanner);
         model.setQuantity(quantity);
 
         title = "Введите цену: ";
         System.out.print(title);
-        price = Validator.validatePriceInput(scanner);
+        price = Validator.validateDoubleInput(scanner);
         model.setPrice(price);
 
         scanner.close();

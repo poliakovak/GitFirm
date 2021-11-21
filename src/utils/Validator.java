@@ -15,42 +15,42 @@ public class Validator {
     }
 
     // Валидация ввода количества
-    public static int validateQuantityInput(Scanner scanner) {
+    public static int validatIntInput(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             String str = scanner.nextLine().trim();
             System.out.printf("\"%s\" - не число!\n", str);
-            System.out.print("Введите количество!: ");
+            System.out.print("Введите значение ещё раз: ");
         }
-        int quantity = scanner.nextInt();
-        while (quantity <= 0) {
-            System.out.println("Неверное значение! Введите количество: ");
+        int inputData = scanner.nextInt();
+        while (inputData <= 0) {
+            System.out.println("Неверное значение! Введите ещё раз: ");
             while (!scanner.hasNextInt()) {
                 String str = scanner.next().trim();
                 System.out.printf("\"%s\" - не число!\n", str);
-                System.out.println("Введите количество!: ");
+                System.out.println("Введите целое значение: ");
             }
-            quantity = scanner.nextInt();
+            inputData = scanner.nextInt();
         }
-        return quantity;
+        return inputData;
     }
 
     // Валидация ввода цены
-    public static double validatePriceInput(Scanner scanner) {
+    public static double validateDoubleInput(Scanner scanner) {
         while (!scanner.hasNextDouble()) {
             String str = scanner.nextLine().trim();
             System.out.printf("\"%s\" - не число!\n", str);
-            System.out.print("Введите цену!: ");
+            System.out.print("Введите значение: ");
         }
-        double price = scanner.nextDouble();
-        while (price <= 0) {
-            System.out.print("Неверное значение! Введите цену: ");
+        double inputData = scanner.nextDouble();
+        while (inputData <= 0) {
+            System.out.print("Неверное значение! Введите ещё раз: ");
             while (!scanner.hasNextDouble()) {
                 String str = scanner.nextLine().trim();
                 System.out.printf("\"%s\" - не число!\n", str);
-                System.out.print("Введите цену!: ");
+                System.out.print("Введите значение: ");
             }
-            price = scanner.nextDouble();
+            inputData = scanner.nextDouble();
         }
-        return price;
+        return inputData;
     }
 }
