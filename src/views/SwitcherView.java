@@ -16,7 +16,7 @@ public class SwitcherView {
 
     public void getInput() {
         scanner = new Scanner(System.in);
-        System.out.print("Для выбора роли нажмите\n1 - Покупатель\n2 - Продавец\n3 - Поставщик: ");
+        System.out.print("Для выбора роли нажмите\n1 - Покупатель\n2 - Продавец\n3 - Поставщик:\n ");
         controllerType = Validator.validateTypeOfController(scanner);
         model.setControllerType(controllerType);
 
