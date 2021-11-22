@@ -29,7 +29,7 @@ public class ClientView {
 
         title = "Введите количество: ";
         System.out.print(title);
-        quantity = Validator.validatIntInput(scanner);
+        quantity = Validator.validateIntInput(scanner);
         model.setQuantity(quantity);
 
         title = "Введите цену: ";

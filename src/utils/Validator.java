@@ -14,8 +14,8 @@ public class Validator {
         return str;
     }
 
-    // Валидация ввода количества
-    public static int validatIntInput(Scanner scanner) {
+    // Валидация ввода значений типа int
+    public static int validateIntInput(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             String str = scanner.nextLine().trim();
             System.out.printf("\"%s\" - не число!\n", str);
@@ -34,7 +34,7 @@ public class Validator {
         return inputData;
     }
 
-    // Валидация ввода цены
+    // Валидация ввода значеный типа double
     public static double validateDoubleInput(Scanner scanner) {
         while (!scanner.hasNextDouble()) {
             String str = scanner.nextLine().trim();

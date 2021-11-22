@@ -28,7 +28,7 @@ public class EmployeeView {
 
         title = "Введите количество рабочих часов: ";
         System.out.print(title);
-        numberOfHours = Validator.validatIntInput(scanner);
+        numberOfHours = Validator.validateIntInput(scanner);
         model.setNumberOfHours(numberOfHours);
 
         title = "Введите ставку за час работы: ";
