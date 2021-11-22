@@ -53,4 +53,24 @@ public class Validator {
         }
         return inputData;
     }
+
+    // Валидация ввода процентной ставки
+    public static int validateTaxInput(Scanner scanner) {
+        while (!scanner.hasNextInt()) {
+            String str = scanner.nextLine().trim();
+            System.out.printf("\"%s\" - не число!\n", str);
+            System.out.print("Введите значение ещё раз: ");
+        }
+        int inputData = scanner.nextInt();
+        while (inputData <= 0 || inputData > 100) {
+            System.out.println("Неверное значение! Введите ещё раз: ");
+            while (!scanner.hasNextInt()) {
+                String str = scanner.next().trim();
+                System.out.printf("\"%s\" - не число!\n", str);
+                System.out.println("Введите целое значение: ");
+            }
+            inputData = scanner.nextInt();
+        }
+        return inputData;
+    }
 }
