@@ -1,15 +1,15 @@
-import controllers.ClientController;
-import models.Client;
-import views.ClientView;
+import controllers.SwitcherController;
+import models.Switcher;
+import views.SwitcherView;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Client model = new Client();
-        ClientView view = new ClientView(model);
-        ClientController controller = new ClientController(model, view);
+        Switcher model = new Switcher();
+        SwitcherView view = new SwitcherView(model);
+        SwitcherController controller = new SwitcherController(model, view);
         controller.runApp();
 
     }
